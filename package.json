@@ -1,0 +1,22 @@
+{
+  "name": "node-app-testing",
+  "version": "1.0.0",
+  "description": "Common practices used to effectively test your applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kimathi-K101/Node-app-testing.git"
+  },
+  "author": "Kimathi Kaai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kimathi-K101/Node-app-testing/issues"
+  },
+  "homepage": "https://github.com/Kimathi-K101/Node-app-testing#readme",
+  "devDependencies": {
+    "mocha": "^3.0.0"
+  }
+}
