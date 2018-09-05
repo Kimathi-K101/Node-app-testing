@@ -7,6 +7,12 @@ module.exports.asyncAdd = (a,b, callback) => {
 };
 
 module.exports.square = (a) => a*a;
+module.exports.asyncSquare = (a, callback) => {
+  setTimeout( () => {
+    callback(a*a);
+  }, 1000);
+};
+
 module.exports.setName = (user, fullName) => {
   var names = fullName.split(' '); //Split on the space into an array
   user.firstName = names[0];
