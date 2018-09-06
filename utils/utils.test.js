@@ -3,7 +3,7 @@ const utils = require('./utils.js');
 
 describe('Utils', () => {
 
-  describe('#Add-Functions', () => {
+  describe('#Add', () => {
     it('should add two numbers', () => {
       var result = utils.add(33,11);
       expect(result).toBe(44).toBeA('number');
