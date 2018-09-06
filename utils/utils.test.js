@@ -1,29 +1,36 @@
 const expect = require('expect');
 const utils = require('./utils.js');
 
-it('should add two numbers', () => {
-  var result = utils.add(33,11);
-  expect(result).toBe(44).toBeA('number');
-});
+describe('Utils', () => {
 
-it('should async add two numbers', (done) => {
-  utils.asyncAdd(4,3, (sum) => {
-    expect(sum).toBe(7).toBeA('number');
-    done();
+  describe('#Add-Functions', () => {
+    it('should add two numbers', () => {
+      var result = utils.add(33,11);
+      expect(result).toBe(44).toBeA('number');
+    });
+
+    it('should async add two numbers', (done) => {
+      utils.asyncAdd(4,3, (sum) => {
+        expect(sum).toBe(7).toBeA('number');
+        done();
+      });
+    });
+  });
+
+  it('should square a number', () => {
+    var result = utils.square(2);
+    expect(result).toBe(4).toBeA('number');
+  });
+
+  it('shouls asyn square a number', (done) => {
+    utils.asyncSquare(2, (results) => {
+      expect(results).toBe(4).toBeA('number');
+      done();
+    });
   });
 });
 
-it('should square a number', () => {
-  var result = utils.square(2);
-  expect(result).toBe(4).toBeA('number');
-});
 
-it('shouls asyn square a number', (done) => {
-  utils.asyncSquare(2, (results) => {
-    expect(results).toBe(4).toBeA('number');
-    done();
-  });
-});
 
 it('should verify that first and last names are set', () => {
   var user = {};
